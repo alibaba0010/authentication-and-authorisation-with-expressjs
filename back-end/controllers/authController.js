@@ -176,6 +176,14 @@ const update_user_profile = async (req, res) => {
     return res.status(500).json({ message: "Server Error", ok: false });
   }
 };
+// delete user from database usig his username
+const delete_user_by_username = async (req, res) => {
+  await UserModel.destroy({
+    where: {
+      username: username,
+    },
+  });
+};
 
 module.exports = {
   login,
@@ -183,4 +191,5 @@ module.exports = {
   register,
   load_user_profile,
   update_user_profile,
+  delete_user_by_username,
 };
