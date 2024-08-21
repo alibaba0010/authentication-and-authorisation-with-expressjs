@@ -178,11 +178,22 @@ const update_user_profile = async (req, res) => {
 };
 // delete user from database usig his username
 const delete_user_by_username = async (req, res) => {
-  await UserModel.destroy({
-    where: {
-      username: username,
-    },
-  });
+  const { username } = req.body;
+
+  try {
+    const deletedUser = await UserModel.destroy({
+      where: { username },
+    });
+
+    if (deletedUser) {
+      res.status(200).json({ message: "User deleted successfully" });
+    } else {
+      res.status(404).json({ message: "User not found" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
 };
 
 module.exports = {
