@@ -8,3 +8,5 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
+
+<h3 align="center">Is it a good idea to require authentication before allowing users to delete other users?</h3>
