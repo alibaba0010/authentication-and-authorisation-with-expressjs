@@ -11,9 +11,7 @@ router.post("/login", (req, res) => authController.login(req, res));
 router.post("/logout", (req, res) => authController.logout(req, res));
 router.post("/register", (req, res) => authController.register(req, res));
 
-router.get("/user", authentication, authorisation("user"), (req, res) =>
-  authController.load_user_profile(req, res)
-);
+router.get("/user", (req, res) => authController.load_user_profile(req, res)); // authentication, authorisation("user"),
 router.put("/user", authentication, authorisation("user"), (req, res) =>
   authController.update_user_profile(req, res)
 );

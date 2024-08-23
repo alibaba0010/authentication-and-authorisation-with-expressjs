@@ -18,6 +18,7 @@ const tokenVerification = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, config.TOKEN_KEY);
     req.user = decoded;
+    next();
   } catch (err) {
     console.log("Failed to authenticate token.");
     return res.status(401).send({
@@ -26,7 +27,6 @@ const tokenVerification = (req, res, next) => {
       status: 401,
     });
   }
-  return next();
 };
 
 module.exports = tokenVerification;
