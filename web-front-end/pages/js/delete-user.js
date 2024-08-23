@@ -12,7 +12,7 @@ deleteUserForm.addEventListener("click", async () => {
   // Confirmation prompt
   if (
     !confirm(
-      `Are you sure you want to delete this user ${username}? This action cannot be undone.`
+      `Are you sure you want to delete this user ${username} This action cannot be undone.`
     )
   ) {
     return;
