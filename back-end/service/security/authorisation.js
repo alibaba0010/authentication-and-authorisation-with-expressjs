@@ -12,6 +12,7 @@ const authorisation = (role) => {
 
       user = decoded.user.account_type;
       if (convertToRole(user) >= convertToRole(role)) {
+        console.log(`Check User ${user}`);
         return next();
       }
     }

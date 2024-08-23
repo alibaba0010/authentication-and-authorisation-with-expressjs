@@ -46,7 +46,7 @@ select {
 }
 
 button {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   background-color: #28a745;
   color: #fff;
@@ -106,6 +106,6 @@ button:hover {
   flex-direction: row;
 }
 
-#submit {
+#profile-submit {
   margin-right: 10px;
 }

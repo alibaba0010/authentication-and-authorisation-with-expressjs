@@ -5,11 +5,10 @@ deleteUserForm.addEventListener("click", async (event) => {
   const username = prompt("Enter the username you want to delete:");
   if (username) {
     // Handle deletion based on the entered username
-    console.log("Deleting user:", username);
     // Confirmation prompt (optional, recommended for security)
     if (
       !confirm(
-        `Are you sure you want to delete this ${username}? This action cannot be undone.`
+        `Are you sure you want to delete this user ${username}? This action cannot be undone.`
       )
     ) {
       return;
@@ -19,9 +18,11 @@ deleteUserForm.addEventListener("click", async (event) => {
       headers: {
         "Content-Type": "application/json",
         // Add authorization header if needed (e.g., token)
+        credentials: "include",
       },
       body: JSON.stringify({ username }),
     });
+    console.log("Response: " + response.ok);
     if (response.ok) {
       const data = await response.json();
       console.log(`Data deleted: ${data}`);

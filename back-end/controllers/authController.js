@@ -178,7 +178,9 @@ const update_user_profile = async (req, res) => {
 };
 // delete user from database usig his username
 const delete_user_by_username = async (req, res) => {
+  console.log("In deleting user");
   const { username } = req.body;
+  console.log(`Username in conroller ${username}`);
 
   try {
     const deletedUser = await UserModel.destroy({
