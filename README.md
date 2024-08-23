@@ -20,9 +20,7 @@
 - [Challenge Part 2](./back-end/README.md)
 - [Getting Started](#getting_started)
 - [Prerequisites](#prerequisites)
-- [The Delete User Functionality](#functionality)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
+- [The Delete User Functionality](#delete)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -30,22 +28,24 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites <a name = "prerequisites"></a>
+## Prerequisites <a name = "prerequisites"></a>
 
 What things you need to install the software and how to install them.
 
 ```
 1. Ensure you have Node.js installed.
 2. cd into backund folder
-3. Install the packages using npm install
+3. Install the packages using npm install, run npm start after successful installation
 4. install SQLite3 Editor and Live Server extensions in your code editor
+5. Open the index.html in "./web-front-end/pages/index.html" using live server
+
 ```
 
 ![](./screenshots/server.png)
 
 <h4 align="center">Server running</h4>
 
-## The Delete User Functionality <a name = "functionality"></a>
+## The Delete User Functionality <a name = "delete"></a>
 
 The functionality added to the project
 
