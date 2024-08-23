@@ -176,7 +176,7 @@ const update_user_profile = async (req, res) => {
     return res.status(500).json({ message: "Server Error", ok: false });
   }
 };
-// delete user from database usig his username
+// delete a user from database using username
 const delete_user_by_username = async (req, res) => {
   const { username } = req.body;
 
