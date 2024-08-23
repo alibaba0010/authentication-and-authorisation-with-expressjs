@@ -46,7 +46,7 @@ select {
 }
 
 button {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   background-color: #28a745;
   color: #fff;
@@ -99,4 +99,13 @@ button:hover {
 
 * {
   box-sizing: border-box;
+}
+
+.profile-button {
+  display: flex;
+  flex-direction: row;
+}
+
+#submit {
+  margin-right: 10px;
 }
