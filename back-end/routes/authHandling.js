@@ -15,7 +15,7 @@ router.get("/user", (req, res) => authController.load_user_profile(req, res)); /
 router.put("/user", authentication, authorisation("user"), (req, res) =>
   authController.update_user_profile(req, res)
 );
-router.put(
+router.delete(
   "/delete/user",
   authentication,
   authorisation({ isAdmin: false }),

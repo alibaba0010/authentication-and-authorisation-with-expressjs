@@ -1,7 +1,7 @@
 const deleteUserForm = document.getElementById("delete-user-form");
 
 deleteUserForm.addEventListener("click", async () => {
-  // event.preventDefault();
+  event.preventDefault();
   const username = prompt("Enter the username you want to delete:");
 
   if (!username) {
@@ -20,20 +20,19 @@ deleteUserForm.addEventListener("click", async () => {
 
   try {
     const response = await fetch("http://127.0.0.1:4001/auth/delete/user", {
-      method: "PUT",
+      method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username }),
       credentials: "include",
     });
 
-    if (!response.ok) {
-      throw new Error(`Error deleting user: ${await response.text()}`);
-    }
-
     const data = await response.json();
-    alert(data.message); // Display success message
+    if (!response.ok) {
+      alert(data.message);
+    } else {
+      alert(data.message); // Display success message
+    }
   } catch (error) {
-    console.error(error);
     alert("An error occurred while deleting the user.");
   }
 });

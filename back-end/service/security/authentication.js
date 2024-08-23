@@ -8,7 +8,6 @@ const tokenVerification = (req, res, next) => {
     req.query.token ||
     req.headers["x-access-token"] ||
     req?.signedCookies?.user?.token;
-  console.log("Token in authentication request " + token);
   if (!token) {
     return res.status(403).send({
       auth: false,
