@@ -15,7 +15,6 @@ const tokenVerification = (req, res, next) => {
       status: 403,
     });
   }
-  console.log(`TOKEN ${token}`);
   try {
     const decoded = jwt.verify(token, config.TOKEN_KEY);
     console.log(" verified " + JSON.stringify(decoded));
