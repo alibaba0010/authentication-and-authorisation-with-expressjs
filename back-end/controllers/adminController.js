@@ -1,7 +1,6 @@
 const UserModel = require("../models/UserModel");
 
 const load_platform_users = async (req, res) => {
-  console.log("In  platform users");
   try {
     let users = await UserModel.findAll({
       attributes: { exclude: ["password", "salt"] },
