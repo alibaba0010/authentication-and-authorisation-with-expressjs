@@ -17,12 +17,12 @@
 
 ## 📝 Table of Contents
 
+- [Challenge Part 2](./back-end/README.md)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
+- [Prerequisites](#prerequisites)
+- [The Delete User Functionality](#functionality)
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -30,7 +30,7 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Prerequisites <a name = "prerequisites"></a>
 
 What things you need to install the software and how to install them.
 
@@ -45,7 +45,9 @@ What things you need to install the software and how to install them.
 
 <h4 align="center">Server running</h4>
 
-## The Delete User Functionality
+## The Delete User Functionality <a name = "functionality"></a>
+
+The functionality added to the project
 
 ![](./screenshots/db.png)
 
