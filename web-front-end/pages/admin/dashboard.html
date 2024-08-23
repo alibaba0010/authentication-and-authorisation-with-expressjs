@@ -12,6 +12,7 @@
       <thead>
         <tr>
           <th>ID</th>
+          <th>Username</th>
           <th>Email</th>
           <th>Actions</th>
         </tr>
@@ -39,8 +40,9 @@
         users.forEach((user) => {
           const row = tbody.insertRow();
           row.insertCell(0).innerText = user.id;
-          row.insertCell(1).innerText = user.email;
-          const actionsCell = row.insertCell(2);
+          row.insertCell(1).innerText = user.username;
+          row.insertCell(2).innerText = user.email;
+          const actionsCell = row.insertCell(3);
           const editButton = document.createElement("button");
           editButton.innerText = "Edit";
           editButton.onclick = () => {
