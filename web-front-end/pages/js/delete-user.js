@@ -26,8 +26,9 @@ deleteUserForm.addEventListener("click", async (event) => {
       const data = await response.json();
       console.log(`Data deleted: ${data}`);
       alert(data.message); // Display success message
-  } else {
-    alert("Please enter a valid username.");
+    } else {
+      alert("Please enter a valid username.");
+    }
   }
 });
 deleteUserForm.addEventListener("submit", async (event) => {
