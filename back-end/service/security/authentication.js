@@ -17,7 +17,6 @@ const tokenVerification = (req, res, next) => {
   }
   try {
     const decoded = jwt.verify(token, config.TOKEN_KEY);
-    console.log(" verified " + JSON.stringify(decoded));
     req.user = decoded;
   } catch (err) {
     console.log("Failed to authenticate token.");
