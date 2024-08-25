@@ -1,7 +1,6 @@
 const deleteUserForm = document.getElementById("delete-user-form");
 
 deleteUserForm.addEventListener("click", async () => {
-  event.preventDefault();
   const username = prompt("Enter the username you want to delete:");
 
   if (!username) {
